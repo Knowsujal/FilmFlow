@@ -53,4 +53,16 @@ var swiper = new Swiper(".coming-container", {
 
     }
   });
-   
+
+function filterFunction() {
+var input, filter, dropdown, options, i;
+input = document.getElementById("dropdown-content");
+filter = input.value.toUpperCase;
+dropdown = document.getElementById ("dropdown" ) ;
+options = dropdown.getElementsByTagName ("a");
+for (i = 0; i < options. length; i++) {
+options [i].style.display
+options [i].innerText.toUpperCase().includes(filter) ?
+"block" : "none";
+ }
+}

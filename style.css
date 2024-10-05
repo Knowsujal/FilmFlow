@@ -22,32 +22,32 @@ body {
   color: var(--bg-color);
 }
 
-header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  right: 0;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 100px;
-  transition: 0.5s;
-}
+.menu-bar{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 100px;
+    transition: 0.5s;
+  }
 
-header.shadow{
-  background: var(--bg-color);
-  box-shadow: 0 0 4px rgb(14 55 54/15%);
-}
-header.shadow .navbar a{
-  color: var(--text-color);
-}
-header.shadow .logo{
-  color: var(--text-color);
-}
+  .menu-bar.shadow{
+    background: var(--bg-color);
+    box-shadow: 0 0 4px rgb(14 55 54/15%);
+  }
+  header.shadow .navbar a{
+    color: var(--text-color);
+  }
+  header.shadow .logo{
+    color: var(--text-color);
+  }
 
 .logo {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: 600;
   align-items: center;
   color: var(--bg-color);
@@ -73,6 +73,12 @@ header.shadow .logo{
   color: var(--bg-color);
 }
 
+.navbar a:hover {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: var(--main-color);
+}
+
 .navbara::after {
   content: '';
   width: 0;
@@ -88,6 +94,7 @@ header.shadow .logo{
 .navbar .active-home::after {
   width: 100%;
 }
+
 #menu-icon{
   font-size: 24px;
   cursor: pointer;
@@ -111,6 +118,35 @@ section {
 
 }
 
+.dropdown_menu {
+  display: none;
+}
+
+.navbar ul li:hover .dropdown_menu {
+  font-size: 14px;
+  padding: 10px 0 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  background-color:var(--text-color);
+  box-sizing: border-box;
+}
+
+.dropdown_menu ul {
+  display: block;
+  margin: 10px;
+}
+
+.dropdown_menu ul li {
+  width: 150px;
+  padding: 10px;
+}
+
+
+
 .container {
   width: 100%;
   min-height: 640px;
@@ -123,9 +159,8 @@ section {
 .container img{
   position: absolute;
   width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
+  height: 80%;
+  object-fit: cover;
   z-index: -1;
 }
 
@@ -154,6 +189,7 @@ section {
   z-index: var(--bg-color);
   font-weight: 500;
   text-transform: uppercase;
+  text-decoration: underline;
 }
 
 .home-text h1 {
@@ -161,6 +197,12 @@ section {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
+}
+
+.home-text h1:hover{
+  text-decoration: double;
+  color: rgba(255, 0, 0, 0.873);
+  cursor: pointer;
 }
 
 .play {
